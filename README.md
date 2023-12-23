@@ -1,2 +1,4 @@
 # Coding_DS_Algo
-Data Structures and Algorithms Questions in Python
+Repository to hold code for Data Structures and Algorithms in Python
+
+
