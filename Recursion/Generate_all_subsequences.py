@@ -5,6 +5,22 @@ class Solution:
     def generate_all_subsequences(
         self, index: int, temp_arr: List[int], arr: List[int]
     ) -> None:
+        """Generate all subsequences of arr
+
+            - Time complexity: O(2^n)
+            - Space complexity: O(n)
+
+            - The idea is to generate all subsequences of arr by picking or not picking
+            each element of arr. We can use recursion to generate all subsequences.
+
+        Args:
+            index (int): Index of the element to be picked
+            temp_arr (List[int]): Temporary array to store the subsequence
+            arr (List[int]): Input array
+
+        Returns:
+            None: Prints all the subsequences
+        """
         if index >= len(arr):
             print(temp_arr, end=" ")
             return
@@ -25,6 +41,28 @@ class Solution:
         current_sum: int,
         target_sum: int,
     ) -> None:
+        """Generate all subsequences of arr with sum k
+
+            - Time complexity: O(2^n)
+            - Space complexity: O(n)
+
+            - The idea is to generate all subsequences of arr by picking or not picking
+            each element of arr. We can use recursion to generate all subsequences and
+            keep track of the current sum of the subsequence. If the current sum of the
+            subsequence is equal to the target sum, then we have found a subsequence with
+            sum k.
+
+        Args:
+            index (int): Index of the element to be picked
+            temp_arr (List[int]): Temporary array to store the subsequence
+            arr (List[int]): Input array
+            current_sum (int): Current sum of the subsequence
+            target_sum (int): Target sum of the subsequence
+
+        Returns:
+            None: Prints all the subsequences of arr with sum k
+
+        """
         if index >= len(arr):
             if current_sum == target_sum:
                 print(temp_arr)
@@ -50,6 +88,25 @@ class Solution:
         current_sum: int,
         target_sum: int,
     ) -> bool:
+        """Generate any subsequence of arr with sum k
+
+            - Time complexity: O(2^n)
+            - Space complexity: O(n)
+
+            - The idea is to generate all subsequences of arr by picking or not picking
+            each element of arr. We can use recursion to generate all subsequences and
+            keep track if we have found a subsequence with the target sum.
+
+        Args:
+            index (int): Index of the element to be picked
+            temp_arr (List[int]): Temporary array to store the subsequence
+            arr (List[int]): Input array
+            current_sum (int): Current sum of the subsequence
+            target_sum (int): Target sum of the subsequence
+
+        Returns:
+            bool: Boolean indicating if a subsequence with target sum was found
+        """
         if index >= len(arr):
             if current_sum == target_sum:
                 print(temp_arr)
@@ -79,6 +136,27 @@ class Solution:
         current_sum: int,
         target_sum: int,
     ) -> int:
+        """Count number of subsequences of arr with sum k
+
+            - Time complexity: O(2^n)
+            - Space complexity: O(n)
+
+            - The idea is to generate all subsequences of arr by picking or not picking
+            each element of arr. We can use recursion to generate all subsequences and
+            keep track of the current sum of the subsequence. If the current sum of the
+            subsequence is equal to the target sum, then count it as a subsequence with
+            sum k.
+
+        Args:
+            index (int): Index of the element to be picked
+            temp_arr (List[int]): Temporary array to store the subsequence
+            arr (List[int]): Input array
+            current_sum (int): Current sum of the subsequence
+            target_sum (int): Target sum of the subsequence
+
+        Returns:
+            int: Number of subsequences of arr with sum k
+        """
         if index >= len(arr):
             if current_sum == target_sum:
                 return 1  # found a subsequence with target sum
