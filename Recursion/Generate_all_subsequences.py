@@ -105,6 +105,7 @@ if __name__ == "__main__":
     print("All subsequences of arr: ")
     s.generate_all_subsequences(0, [], arr)
     print()
+
     print("#" * 100)
     print("Input: arr = [10, 5, 2, 3, 6, 1], target_sum = 22")
     arr = [10, 5, 2, 3, 6, 1]
