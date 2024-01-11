@@ -7,6 +7,15 @@ from typing import List
 # User function Template for python3
 class Solution:
     def subsetSums(self, arr: List[int], N: int) -> List[int]:
+        """Subset sums
+
+        Args:
+            arr (List[int]): Input array
+            N (int): Length of the input array
+
+        Returns:
+            List[int]: List of all the subset sums
+        """
         # code here
         subset_sums = []
         self.computeAllSubsetSums(arr, N, 0, 0, subset_sums)

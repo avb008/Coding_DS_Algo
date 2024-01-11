@@ -37,14 +37,23 @@ class Solution:
         """
         all_subsets.append(temp_arr.copy())
         for i in range(index, len(nums)):
+            # Skip the duplicate elements but not the first element
+            # [1,2,2,2] and if the temp_arr is [1,2] we can pick second 2 but not the third 2
             if i != index and nums[i] == nums[i - 1]:
                 continue
             temp_arr.append(nums[i])
             self.allUniqueSubsets(nums, i + 1, temp_arr, all_subsets)
             temp_arr.pop()
 
-    def printUniqueSubset(self, nums: List[int]):
-        # Code here
+    def printUniqueSubset(self, nums: List[int]) -> List[List[int]]:
+        """Print all the unique subsets of the given array
+
+        Args:
+            nums (List[int]): Input array
+
+        Returns:
+            List[List[int]] : List[List[int]]: List of all the unique subsets
+        """
 
         nums.sort()
         all_unique_subsets = []
