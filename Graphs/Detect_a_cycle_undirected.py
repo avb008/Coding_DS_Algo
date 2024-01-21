@@ -46,6 +46,9 @@ class Solution:
     def isCycle(self, V: int, adj: List[List[int]]) -> bool:
         """Function to detect cycle in an undirected graph
 
+            - Time Complexity: O(V + E)
+            - Space Complexity: O(V)
+
         Args:
             V (int): Number of vertices
             adj (List[List[int]]): Adjacency list

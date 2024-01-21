@@ -50,3 +50,15 @@ class BinaryTree:
         maxPathSumUtil(root, max_path_sum)
 
         return max_path_sum[0]
+
+
+if __name__ == "__main__":
+    root = Treenode(1)
+    root.left = Treenode(2)
+    root.right = Treenode(3)
+    root.left.left = Treenode(4)
+    root.left.right = Treenode(5)
+    root.right.left = Treenode(6)
+    root.right.right = Treenode(7)
+
+    print(BinaryTree().maxPathSum(root))
